@@ -17,3 +17,21 @@ unzip opencv_contrib.zip
 cd opencv-4.7.0
 mkdir build
 cd build
+
+cmake \
+-DCMAKE_BUILD_TYPE=Release \
+-DCMAKE_INSTALL_PREFIX=/usr/local \
+-DOPENCV_ENABLE_NONFREE=1 \
+-DBUILD_opencv_python2=1 \
+-DBUILD_opencv_python3=1 \
+-DWITH_FFMPEG=1 \
+-DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda \
+-DCUDA_ARCH_BIN=5.3 \
+-DCUDA_ARCH_PTX=5.3 \
+-DWITH_CUDA=1 \
+-DENABLE_FAST_MATH=1 \
+-DCUDA_FAST_MATH=1 \
+-DWITH_CUBLAS=1 \
+-DOPENCV_GENERATE_PKGCONFIG=1 \
+-DOPENCV_EXTRA_MODULES_PATH=/home/jetson/Downloads/opencv_contrib-4.7.0/modules \
+..
